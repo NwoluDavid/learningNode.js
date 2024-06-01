@@ -22,9 +22,9 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(8001, (err) => {
+server.listen(8000, (err) => {
     if (err) {
         return console.error('Error starting server:', err);
     }
-    console.log(`Server is listening on port 8001`);
+    console.log(`Server is listening on port 8000`);
 });

@@ -1,4 +1,4 @@
-const amount = 9
+const amount = 90
 
 if (amount<10){
     console.log("this number is less than 10"

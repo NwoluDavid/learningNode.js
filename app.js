@@ -1,23 +1,18 @@
-// npm -global command, comes with node
-// npm - version
+var http = require("http")
+var fs = require("fs")
 
+const server = http.createServer((req, res)=>{
+    // const text =fs.readFileSync("./content/big.txt","utf8")
+    // res.end(text)
+    const filestream = fs.createReadStream("./content/big.txt", "utf8")
+    filestream.on("d")
+})  
 
-// local dependency - use it only in this particular project
-// npm i <packagename>
-
-// global dependency -use it in any project
-// npm install -g <packageName>
-// sudo install -g <packageName> 
-
-// here we imported a dependency this is not a node depends, 
-// lodash is one of the dependency we installed.
-const  _ =require('lodash')
-
-const items = [1,[2,[3,[4]]]]
-const newItems = _.flattenDeep(items)
-console.log(newItems)
-
-
-
-
-
+server.listen(5000, (err)=>{
+    if (err){
+        console.log(err)
+    }
+    else{
+        console.log("server is listening to port 5000")
+    }
+})

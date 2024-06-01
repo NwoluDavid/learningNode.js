@@ -6,4 +6,4 @@ const sayhey = function(name){
     console.log( " hi there \n\ " + name)
 }
 
-module.exports = sayHi
+module.exports ={sayHi , sayhey}

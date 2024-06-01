@@ -1,12 +1,13 @@
+// this demostrtes how a module can be imported 
 
-
-// module
-
+// importing module
 const names =require("./3-module")
-const sayHi =require("./4-utils")
+const Greet =require("./4-utils")
 console.log(names)
+console.log(Greet)
 
-sayHi(names.john)
-// sayhey("david")
-// sayHi(peter)
-// sayHi(john)
+Greet.sayHi(names.john)
+
+Greet.sayhey("david")
+Greet.sayHi(names.peter)
+Greet.sayHi(names.john)

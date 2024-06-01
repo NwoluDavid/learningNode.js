@@ -1,4 +1,5 @@
 // File Modules
+// "fs"represents the file in built module that comes with node.
 // the file modules helps us to read and write into a file.
 
 const {readFileSync, writeFileSync} =require("fs")
